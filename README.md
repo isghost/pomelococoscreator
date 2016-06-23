@@ -1,0 +1,2 @@
+# pomelococoscreator
+cocos creator里添加pomelo所需的js文件
