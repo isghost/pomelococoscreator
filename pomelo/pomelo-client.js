@@ -1,4 +1,12 @@
+require("protobuf");
+require("protocol");
 (function() {
+  if(typeof(console.warn) === "undefined"){
+    console.warn = cc.warn;
+  }
+  if(typeof(console.error) === "undefined"){
+    console.error = cc.error;
+  }
   var JS_WS_CLIENT_TYPE = 'js-websocket';
   var JS_WS_CLIENT_VERSION = '0.0.1';
 
@@ -9,7 +17,7 @@
   var decodeIO_decoder = null;
   var Package = Protocol.Package;
   var Message = Protocol.Message;
-  var EventEmitter = window.EventEmitter;
+  var EventEmitter = require("events");
   var rsa = window.rsa;
 
   if(typeof(window) != "undefined" && typeof(sys) != 'undefined' && sys.localStorage) {
