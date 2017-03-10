@@ -8,7 +8,7 @@
 
 # 修改内容
 将上面的文件直接扔进工程，是无法直接使用`pomelo`，需要做一些简单修改，修改后的文件放在
-[pomelo](https://github.com/isghost/pomelococoscreator)这里。将代码丢进工程,
+[pomelo](https://github.com/cubemoon/pomelococoscreator/tree/master/pomelo)这里。将代码丢进工程,
 再```require("relative_path/pomelo-client")```即可。
 
 # 使用方法
