@@ -1,6 +1,5 @@
 # pomelococoscreator
-专为cocos creator修改的pomelo-jsclient代码
-
+专为cocos creator修改的pomelo游戏框架的客户端js代码，使用的是websocket协议，服务端初始化时，通讯类型选第一个(ws)
 # 源文件列表及地址
 * [protocol](https://github.com/NetEase/pomelo-protocol)
 * [protobuf](https://github.com/pomelonode/pomelo-protobuf)
