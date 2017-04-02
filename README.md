@@ -60,3 +60,30 @@
 ## 断开连接
 
 	pomelo.disconnect();
+
+# 异常
+
+以下内容为查看源码所得，不保证正确性
+
+## 异常触发的事件
+
+	pomelo.emit('reconnect');
+	pomelo.emit('io-error', event);
+	pomelo.emit('close',event);
+	pomelo.emit('disconnect', event);
+	pomelo.emit('heartbeat timeout');
+	pomelo.emit('error', 'client version not fullfill');
+	pomelo.emit('error', 'handshake fail');
+	pomelo.emit('onKick', data);
+
+## 设置异常事件处理(事件名对应即可)
+
+	pomelo.on("reconnect", callback);
+
+	pomelo.on("close",  function(event){
+		
+	});
+
+	pomelo.on("io-error", function(event){
+
+	});
