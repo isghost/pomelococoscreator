@@ -87,3 +87,9 @@
 	pomelo.on("io-error", function(event){
 
 	});
+
+## 异常事件状态码
+由于`close`事件可以是正常关闭，也有可能是异常关闭，所以需要根据关闭时，事件的`code`进行相应的处理
+状态码查询地址： [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent)
+
+需要注意的是，socket的error事件对应pomelo的事件是io-error。
