@@ -366,4 +366,4 @@
   if(typeof(window) != "undefined") {
     window.Protocol = Protocol;
   }
-})(typeof(window)=="undefined" ? module.exports : (this.Protocol = {}),typeof(window)=="undefined"  ? Buffer : Uint8Array, this);
+})(typeof(window)=="undefined" ? module.exports : (window.Protocol = {}),typeof(window)=="undefined"  ? Buffer : Uint8Array, this);

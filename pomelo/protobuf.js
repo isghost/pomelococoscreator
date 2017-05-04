@@ -34,7 +34,7 @@
     window.protobuf = Protobuf;
   }
   
-})(typeof(window) == "undefined" ? module.exports : (this.protobuf = {}), this);
+})(typeof(window) == "undefined" ? module.exports : (window.protobuf = {}), this);
 
 /**
  * constants
