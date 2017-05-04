@@ -93,3 +93,12 @@
 状态码查询地址： [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent)
 
 需要注意的是，socket的error事件对应pomelo的事件是io-error。
+
+## 注意事项
+
+1. 使用pomelo.on监听事件的时候，如果对同一事件重复监听，所有的监听事件都会被调用。所以，使用pomelo.on事件前，最好先清理一下。
+
+	pomelo.removeAllListeners([event])
+
+2. `protobuf.js`,`protocol.js`在creator里，有些代码是冗余的，但为了保持与官方的一致，并未进行精简。
+
