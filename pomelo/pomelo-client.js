@@ -81,6 +81,19 @@ require("protocol");
     }
   };
 
+  //非官方函数
+  /**
+   * @return {bool} true正常回调, false不再调用rpc的回调函数
+   */
+  var filterAfter = function(data){
+    return true;
+  }
+
+  pomelo.setFilterAfter = function(cb){
+    filterAfter = cb;
+  }
+  // 非官方函数结束
+
   var initCallback = null;
 
   pomelo.init = function(params, cb) {
@@ -249,7 +262,7 @@ require("protocol");
     if(!route) {
       return;
     }
-
+    pomelo.emit('beforeRPC');
     reqId++;
     sendMessage(reqId, route, msg);
 
@@ -385,8 +398,10 @@ require("protocol");
     if(typeof cb !== 'function') {
       return;
     }
-
-    cb(msg.body);
+    pomelo.emit("afterRPC");
+    if(filterAfter(msg.body)){
+        cb(msg.body);
+    }
     return;
   };
 
@@ -415,7 +430,6 @@ require("protocol");
       return JSON.parse(Protocol.strdecode(msg.body));
     }
 
-    return msg;
   };
 
   var handshakeInit = function(data) {
