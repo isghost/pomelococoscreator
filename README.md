@@ -10,8 +10,6 @@
 [pomelo](https://github.com/isghost/pomelococoscreator/tree/master/pomelo)这里。将代码丢进工程,
 再```require("relative_path/pomelo-client")```即可。
 
-# 使用方法
-以下内容引用自[pomelo-jsclient-websocket](https://github.com/pomelonode/pomelo-jsclient-websocket)
 
 ## 连接到服务器
 
