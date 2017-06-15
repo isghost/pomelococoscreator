@@ -59,6 +59,21 @@
 
 	pomelo.disconnect();
 
+## 普通事件
+
+	pomelo.emit('beforeRPC'); //调用rpc之前
+	pomelo.emit("afterRPC"); //调用rpc之后
+
+适用于网络请求过程中添加遮罩
+
+## 设置回调过滤函数
+
+适用于处理服务器返回错误信息
+
+	pomelo.setFilterAfter = function(cb){
+	   filterAfter = cb;
+	}
+
 # 异常
 
 以下内容为查看源码所得，不保证正确性
